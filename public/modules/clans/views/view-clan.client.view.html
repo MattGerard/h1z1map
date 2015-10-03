@@ -1,0 +1,41 @@
+<section data-ng-controller="ClansController" data-ng-init="findOne()">
+	<div class="page-header">
+		<h1 data-ng-bind="clan.name"></h1>
+	</div>
+
+  <section data-ng-controller="MarkersController">
+      <div class="map-menu" data-ng-show="authentication.user">
+        <section data-ng-include="'/modules/markers/views/create-marker.client.view.html'"></section>
+      </div>
+      <section data-ng-include="'/modules/markers/views/map.view.html'" class="map_container" ng-class="authentication.user ? 'signedIn' : 'signedOut'"></section>
+  </section>
+
+<div class="clan-view">
+  
+  <h3>Members</h3>
+    <ul class="user-list">
+      <li ng-repeat="member in clan.members">
+      {{member.username}}
+      </li>
+    </ul>
+ 
+
+	<div class="pull-right" data-ng-show="((authentication.user) && (authentication.user._id == clan.user._id))">
+		<a class="btn btn-primary" href="/#!/clans/{{clan._id}}/edit">
+			<i class="glyphicon glyphicon-edit"></i>
+		</a>
+		<a class="btn btn-primary" data-ng-click="remove();">
+			<i class="glyphicon glyphicon-trash"></i>
+		</a>
+	</div>
+	<small>
+		<em class="text-muted">
+			Posted on
+			<span data-ng-bind="clan.created | date:'mediumDate'"></span>
+			by
+			<span data-ng-bind="clan.user.displayName"></span>
+		</em>
+	</small>
+
+</div>
+</section>

@@ -1,0 +1,124 @@
+.undecorated-link:hover {
+  text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.map_container{
+  top:50px;
+  left:0;
+  position:fixed;
+  bottom:0;
+  right:0;
+  z-index:1;
+}
+
+.edit-marker label{
+  color:#000;
+  font-weight:bold;
+  padding-bottom:5px;
+}
+
+.leaflet-container{
+  width:100%;
+  height:100%;
+}
+
+.map-menu{
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  height: auto;
+  z-index: 1029;
+  margin-left: -150px;
+  width: 300px;
+  background: #000000;
+  background: rgba(0,0,0,.8);
+  box-shadow: 2px 2px 2px rgba(0,0,0,.2);
+}
+
+.map-menu.closed,.map_container.signedIn.menu-closed{
+  left:-275px;
+}
+
+.marker-menu-label.control-label{
+  color:#efefef;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+
+.leaflet-popup-content-wrapper{
+  border-radius:0;
+  width:300px;
+}
+
+.create-marker{
+  margin-bottom:20px;
+  display:none;
+}
+
+.create-marker .form-control{
+  margin-top:10px;
+}
+
+.create-marker h3{
+  color:#fff;
+}
+
+.create-marker .btn{
+  margin-top:20px;
+}
+
+.form-control.marker-desc{
+  height:50px;
+}
+
+section.content{
+  margin-top:100px;
+}
+
+.collapse-Menu{
+  position: absolute;
+  bottom: -32px;
+  line-height: 20px;
+  padding: 4px;
+  padding-left:8px;
+  padding-bottom:6px;
+  cursor: pointer;
+  left: 50%;
+  margin-left: -60px;
+  padding-top: 8px;
+  background: #000000;
+  background: rgba(0,0,0,.8);
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  color:#fff;
+}
+
+
+.collapse-Menu:after{
+  content:"\e114";
+  font-family:"Glyphicons Halflings";
+  line-height:1;
+  margin:5px;
+  color:#cc0000;
+}
+
+.collapse-Menu.active:after{
+  content:"\e113";
+  font-family:"Glyphicons Halflings";
+  line-height:1;
+  margin:5px;
+  color:#cc0000;
+}
+
+.edit-poi{
+ display:block;
+}
+
+/* hide */
+
+.hide{
+  display:none;
+}

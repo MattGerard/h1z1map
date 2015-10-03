@@ -1,0 +1,8 @@
+<section data-ng-controller="HomeController">
+  <section data-ng-controller="MarkersController">
+      <div class="map-menu" data-ng-show="authentication.user">
+        <section data-ng-include="'/modules/markers/views/create-marker.client.view.html'"></section>
+      </div>
+      <section data-ng-include="'/modules/markers/views/map.view.html'" class="map_container" ng-class="authentication.user ? 'signedIn' : 'signedOut'"></section>
+  </section>
+</section>

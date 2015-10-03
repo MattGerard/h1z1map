@@ -1,0 +1,14 @@
+<section data-ng-controller="MarkersController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Markers</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="marker in markers" data-ng-href="#!/markers/{{marker._id}}" class="list-group-item">
+            <small class="list-group-item-text">{{marker.created | date:'medium'}} / {{marker.user.displayName}}</small>
+            <h4 class="list-group-item-heading">{{marker.title}}</h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!markers.$resolved || markers.length">
+        No Markers yet, why don't you <a href="/#!/markers/create">create one</a>?
+    </div>
+</section>
