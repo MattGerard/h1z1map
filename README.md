@@ -1,7 +1,7 @@
 ## H1Z1 Map Marker & Clan Marker Tool
 A concept build using the MEAN stack, built with MEANJS.org
 
-Integrated with TwitchTV auth, you can create a clan, add users to that clan, and then add markers than only users within a certain clan can see. You could belong to many clans and see multiple markers depending on the clan view you choose. There is also a seperate private view for solo markers.
+Integrated with TwitchTV auth, you can create a clan, add users to that clan, and then add markers than only users within a certain clan can see. You could belong to many clans and see multiple markers depending on the clan view you choose. There is also a separate private view for solo markers.
 
 Below is an excerpt on how to get a MEANJS application running.
 
